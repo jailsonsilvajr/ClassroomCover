@@ -1,1 +1,14 @@
-feature: Cadastro de Roteiros
+Feature: Cadastro de Roteiros
+	As a: professor responsável por uma classe
+	I want to: criar roteiros para as metas e adicionar questões aos roteiros
+	So that: Eu posso disponibilizar os roteiros para avaliar os alunos
+
+Scenario: Cadastrar um roteiro
+
+Scenario: Cadastrar uma questão
+
+Scenario: Adicionar uma questão a um roteiro
+
+Scenario: Remover um roteiro
+
+Scenario: Remover uma questão

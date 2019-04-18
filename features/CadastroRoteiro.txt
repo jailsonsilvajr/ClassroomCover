@@ -4,6 +4,16 @@ Feature: Cadastro de Roteiros
 	So that: Eu posso disponibilizar os roteiros para avaliar os alunos
 
 Scenario: Cadastrar um roteiro
+	Given estou logado como "Professor"
+	And estou na página "Cadastro de Roteiros"
+	And vejo o campo "nome" vazio
+	And vejo o campo "meta" vazio
+	When adiciono "Gerência de projetos" ao campo "nome"
+	And adiciono a meta "Gerência de projetos" ao campo "meta"
+	And salvo o roteiro
+	Then vejo uma mensagem de sucesso
+	And estou na página "Roteiros"
+	And vejo o roteiro "Gerência de projetos" na lista de roteiros cadastrados
 
 Scenario: Cadastrar uma questão
 

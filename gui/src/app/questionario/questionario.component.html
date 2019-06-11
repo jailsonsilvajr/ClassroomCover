@@ -1,0 +1,14 @@
+
+
+
+<div class="row"  style="text-align: center" >
+
+ <div *ngFor="let questao of questionario.questoes"  class="col-md-6">
+  <div *ngFor="let alternativa of questao.alternativas">
+    <div>
+      {{alternativa}}
+    </div>
+  </div>
+ </div>
+
+</div>

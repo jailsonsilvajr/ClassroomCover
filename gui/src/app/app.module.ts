@@ -6,11 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuestionarioComponent } from './questionario/questionario.component';
 import { RouterModule } from '@angular/router';
+import { AlunoComponent } from './aluno/aluno.component';
+import { ProfessorComponent } from './professor/professor.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionarioComponent
+    QuestionarioComponent,
+    AlunoComponent,
+    ProfessorComponent
   ],
   imports: [
     BrowserModule,

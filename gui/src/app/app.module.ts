@@ -10,7 +10,9 @@ import { ProfessorComponent } from './professor/professor.component';
 import { AlunoAddComponent } from './aluno-add/aluno-add.component';
 import { AlunoListComponent } from './aluno-list/aluno-list.component';
 import { FormsModule } from '@angular/forms';
-import {AlunoService} from './aluno.service'
+import {AlunoService} from './aluno.service';
+import { UsuarioAddComponent } from './usuario-add/usuario-add.component';
+import { UsuarioListComponent } from './usuario-list/usuario-list.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {AlunoService} from './aluno.service'
     QuestionarioComponent,
     ProfessorComponent,
     AlunoAddComponent,
-    AlunoListComponent
+    AlunoListComponent,
+    UsuarioAddComponent,
+    UsuarioListComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,10 @@ import {AlunoService} from './aluno.service'
       {
         path: 'Alunoadd',
         component: AlunoAddComponent
+      },
+      {
+        path: 'UsuarioList',
+        component: UsuarioListComponent
       }
     ])
   ],

@@ -10,21 +10,22 @@ export class UsuarioService {
 
   constructor(private http: Http) { }
 
-  criar(Usuario: Usuario) {
-     console.log('chegou'); 
-     this.http.post('http://localhost:3000/aluno',{'teste' : 'qweuqhwuh'}, {headers: this.headers})
+  criar(usuario: Usuario) : boolean {
+     this.http.post('http://localhost:3000/Usuarios', JSON.stringify(usuario), {headers: this.headers})
            .toPromise()
            .then(res => {
-              if (res.json().success) {console.log("sucesso ao inserir aluno")} else {return null;}
+              if (res.json().success) {return true} else {return null;}
            })
            .catch(this.tratarErro);
+
+      return false;
   }
 
 
   getUsuarios(): Promise<Usuario[]> {
     return this.http.get(this.taURL + "/Usuarios")
              .toPromise()
-             .then(res => res.json() as Usuario[])
+             .then(res =>  res.json())
              .catch(this.tratarErro);
   }
 

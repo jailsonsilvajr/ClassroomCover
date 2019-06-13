@@ -12,7 +12,10 @@ import { AlunoListComponent } from './aluno-list/aluno-list.component';
 import { FormsModule } from '@angular/forms';
 import {AlunoService} from './aluno.service';
 import { UsuarioAddComponent } from './usuario-add/usuario-add.component';
-import { UsuarioListComponent } from './usuario-list/usuario-list.component'
+import { UsuarioService } from './usuario.service';
+import { UsuarioListComponent } from './usuario-list/usuario-list.component';
+import { QuestionarioAddComponent } from './questionario-add/questionario-add.component';
+
 
 @NgModule({
   declarations: [
@@ -21,8 +24,9 @@ import { UsuarioListComponent } from './usuario-list/usuario-list.component'
     ProfessorComponent,
     AlunoAddComponent,
     AlunoListComponent,
+    UsuarioListComponent,
     UsuarioAddComponent,
-    UsuarioListComponent
+    QuestionarioAddComponent
   ],
   imports: [
     BrowserModule,
@@ -39,16 +43,20 @@ import { UsuarioListComponent } from './usuario-list/usuario-list.component'
         component: ProfessorComponent
       },
       {
-        path: 'Alunoadd',
-        component: AlunoAddComponent
+        path: 'UsuarioAdd',
+        component: UsuarioAddComponent
       },
       {
         path: 'UsuarioList',
         component: UsuarioListComponent
+      },
+      {
+        path: 'QuestionarioAdd',
+        component: QuestionarioAddComponent
       }
     ])
   ],
-  providers: [AlunoService],
+  providers: [AlunoService , UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,7 +7,7 @@ function getUsuario(sequelize, DataTypes) {
         primaryKey: true,
         defaultValue: DataTypes.UUIDV4
       },
-      name: {
+      nome: {
         type: DataTypes.STRING,
         required: true
       },
@@ -15,10 +15,12 @@ function getUsuario(sequelize, DataTypes) {
         type: DataTypes.STRING,
         required: true
       },
-      role: {
+      acesso: {
         type: DataTypes.ENUM,
-        values: ['Professor', 'Aluno']
-  
+        values: ['Professor', 'Aluno'] 
+      },email : {
+        type: DataTypes.STRING,
+        required: true
       }
     });
     return Usuario;

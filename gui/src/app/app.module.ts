@@ -15,7 +15,7 @@ import { UsuarioAddComponent } from './usuario-add/usuario-add.component';
 import { UsuarioService } from './usuario.service';
 import { UsuarioListComponent } from './usuario-list/usuario-list.component';
 import { QuestionarioAddComponent } from './questionario-add/questionario-add.component';
-
+import {QuestionarioService} from '../app/Questionario.service'
 
 @NgModule({
   declarations: [
@@ -56,7 +56,7 @@ import { QuestionarioAddComponent } from './questionario-add/questionario-add.co
       }
     ])
   ],
-  providers: [AlunoService , UsuarioService],
+  providers: [AlunoService , UsuarioService , QuestionarioService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

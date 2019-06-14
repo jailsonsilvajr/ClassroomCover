@@ -14,7 +14,7 @@ export class UsuarioListComponent implements OnInit {
   
   usuarios: Usuario[];
 
-  acessos : ['Aluno' , 'Professor']
+
 
   addUsuario(){
     this.router.navigate(['UsuarioAdd'])

@@ -42,9 +42,9 @@
   
 
   app.get('/Questionarios', function (req, res) {
-    User.findAll().then(users => res.json(users))
+    Questionario.findAll().then(questionario => res.json(questionario))
   });
-  
+
 
   function inserirQuestoes(Questionarioid,questoes){
     questoes.forEach(function(element) {

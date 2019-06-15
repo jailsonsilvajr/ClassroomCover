@@ -15,7 +15,10 @@ import { UsuarioAddComponent } from './usuario-add/usuario-add.component';
 import { UsuarioService } from './usuario.service';
 import { UsuarioListComponent } from './usuario-list/usuario-list.component';
 import { QuestionarioAddComponent } from './questionario-add/questionario-add.component';
-import {QuestionarioService} from '../app/Questionario.service'
+import {QuestionarioService} from '../app/Questionario.service';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { DeshBoardComponent } from './desh-board/desh-board.component';
+import { LoginComponent } from './login/login.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import {QuestionarioService} from '../app/Questionario.service'
     AlunoListComponent,
     UsuarioListComponent,
     UsuarioAddComponent,
-    QuestionarioAddComponent
+    QuestionarioAddComponent,
+    NavBarComponent,
+    DeshBoardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +59,14 @@ import {QuestionarioService} from '../app/Questionario.service'
       {
         path: 'QuestionarioAdd',
         component: QuestionarioAddComponent
+      },
+      {
+        path: 'DeshBorad',
+        component: DeshBoardComponent
+      },
+      {
+        path: 'login',
+        component: LoginComponent
       }
     ])
   ],

@@ -23,8 +23,8 @@ export class QuestionarioService {
   }
 
 
-  getQuestionario(): Promise<Questionario[]> {
-    return this.http.get(this.taURL + "/Questionario")
+  getQuestionarios(): Promise<Questionario[]> {
+    return this.http.get(this.taURL + "/Questionarios")
              .toPromise()
              .then(res =>  res.json())
              .catch(this.tratarErro);
